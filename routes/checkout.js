@@ -37,7 +37,7 @@ router.post('/create-session', async (req, res, next) => {
       cancel_url: cancelUrl,
       subscription_data: {
         trial_period_days: 14, // 14-day free trial
-        description: 'Free trial with $29 authorization hold verification',
+        description: 'Free trial with $_ authorization hold verification',
         metadata: {
           auth_hold_amount: 2900,
           type: 'free_trial',

@@ -1,7 +1,7 @@
 const { stripe } = require('../config/stripe');
 
 /**
- * Create a $29 authorization hold without capturing funds
+ * Create a $_ authorization hold without capturing funds
  * Uses PaymentIntent with capture_method: 'manual' to hold funds without charging
  * @param {string} customerId - Stripe customer ID
  * @param {string} paymentMethodId - Stripe payment method ID
@@ -10,7 +10,7 @@ const { stripe } = require('../config/stripe');
 const createAuthorizationHold = async (customerId, paymentMethodId) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: 2900, // $29.00 in cents
+      amount: 2900, // $_.00 in cents
       currency: 'usd',
       customer: customerId,
       payment_method: paymentMethodId,

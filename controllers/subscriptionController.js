@@ -49,7 +49,7 @@ const createFreeTrialSubscription = async (customerId, priceId) => {
       },
       metadata: {
         trial_type: 'free_trial_with_authorization',
-        auth_hold_amount: 2900, // $29.00
+        auth_hold_amount: _,
       },
     });
 

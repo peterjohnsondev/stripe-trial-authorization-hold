@@ -4,7 +4,7 @@ const authController = require('../controllers/authorizationController');
 
 /**
  * POST /api/authorization/hold
- * Create $29 authorization hold on customer's card
+ * Create $_ authorization hold on customer's card
  * Request body:
  * {
  *   "customerId": "cus_xxx",
@@ -27,7 +27,7 @@ router.post('/hold', async (req, res, next) => {
     );
 
     res.status(201).json({
-      message: '$29 authorization hold created successfully',
+      message: '$_ authorization hold created successfully',
       data: result,
     });
   } catch (error) {
